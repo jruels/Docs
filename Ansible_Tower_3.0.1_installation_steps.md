@@ -9,23 +9,23 @@ This is a quickstart reference of the commands needed to install and configure A
 
 Install EPEL repository
 
-```yum install -y http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm```
+`yum install -y http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm`
 
 Download Tower
 
-```wget https://releases.ansible.com/awx/setup/ansible-tower-setup-latest.tar.gz```
+`wget https://releases.ansible.com/awx/setup/ansible-tower-setup-latest.tar.gz`
 
 Extract Tower
 
-```tar zxvf ansible-tower-setup-latest.tar.gz```
+`tar zxvf ansible-tower-setup-latest.tar.gz`
 
 Switch to Ansible Tower directory
 
-```cd ansible-tower-setup*```
+`cd ansible-tower-setup*`
 
 Edit inventory file 
 
-```vi inventory```
+`vi inventory`
 
 Below is an example inventory file, make sure to update the password values. 
 
@@ -52,26 +52,26 @@ Ansible requires ssh access to the hosts it will be managing.
 
 Generate an SSH key
 
-```ssh-keygen```
+`ssh-keygen`
 
 Hit enter to accept defaults
 
 Add ssh key to authorized_keys file
 
-```cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys```
+`cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys`
 
 Setup permissions
 
-```chmod 600 ~/.ssh/authorized_keys```
+`chmod 600 ~/.ssh/authorized_keys`
 
 Now ssh to localhost and accept the fingerprint
 
-```ssh localhost```
+`ssh localhost`
 
 
 Now we are ready to run the setup script
 
-```./setup.sh```
+`./setup.sh`
 
 After setup has completed successfully you will get the following message:
 
